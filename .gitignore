@@ -1,3 +1,5 @@
+*.iml
+
 /lambda/venv
 /lambda/requirements.txt
 /lambda/lambda-yoda.zip

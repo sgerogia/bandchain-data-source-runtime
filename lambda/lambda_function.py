@@ -75,9 +75,9 @@ def lambda_handler(event, context):
     except ValueError:
         return bad_request("Timeout format invalid")
 
-    path = "/tmp/execute.sh"
-    with open(path, "w") as f:
-        f.write(executable.decode())
+    path = "/tmp/execute"
+    with open(path, "wb") as f:
+        f.write(executable)
 
     os.chmod(path, 0o775)
     try:
